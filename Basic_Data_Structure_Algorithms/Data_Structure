@@ -1,0 +1,1128 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "id": "1421ef06-e4eb-44c2-b0ab-d017e43fb6b7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Data Structures in Python \n",
+    "import array as arr"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bc0ef87b-15c1-485a-a654-bae66dc1a552",
+   "metadata": {},
+   "source": [
+    "* Bluit-in Data Stuctures\n",
+    "<br> List\n",
+    "<br> Tuple\n",
+    "<br> Dictionary \n",
+    "<br> Set\n",
+    "\n",
+    "* user-defined Data Structures\n",
+    "<br> Stack\n",
+    "<br> Tree\n",
+    "<br> Graph\n",
+    "<br> Queue\n",
+    "<br> LinkList\n",
+    "<br> HashMap\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "77547c3e-ced7-41da-9534-e2ba50606d14",
+   "metadata": {},
+   "source": [
+    "## Bluit-in Data Stuctures"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4d08465-fa47-448f-9a79-586d79f8d16b",
+   "metadata": {},
+   "source": [
+    "### List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "af943baa-4934-45cc-ad23-cccca6108048",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[12, 'xyz', 34]\n",
+      "[]\n",
+      "[3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#List\n",
+    "a = [12,\"xyz\",34]\n",
+    "print(a)\n",
+    "# List append \n",
+    "b = []\n",
+    "print(b)\n",
+    "b.append(3)\n",
+    "print(b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0e7174e6-05d6-4286-89f6-2cbd4d2b1e1e",
+   "metadata": {},
+   "source": [
+    "*  append()\n",
+    "* extend()\n",
+    "* insert()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "5994e32b-0407-48f5-bf11-df116b32eeda",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 'Kishan']\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1 = [1,2,3,'Kishan']\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "814af843-1f02-4f01-a874-26a08d935428",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 'Kishan', 2]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1.append(2)\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "b48778b1-9d52-48ac-9fbb-f0fb6a404cec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 'Kishan', 2, (2, 0)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1.append((2,0))\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "df9c12ca-f103-4504-86b0-b4f900149495",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 'Kishan', 2, (2, 0), 7, 8]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1.extend((7,8))\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "3b9d5d51-808a-4568-a774-2bef713a4d76",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 'example', 'Kishan', 2, (2, 0), 7, 8]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1.insert(3, 'example')\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "47ded1af-1731-4e21-97c8-2e02b9c3768a",
+   "metadata": {},
+   "source": [
+    "*  del()\n",
+    "*  pop()\n",
+    "*  remove()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "a52e3ff4-afa6-4a81-9721-7671bf383db8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 'example', 'Kishan', 2, (2, 0), 7, 8]"
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "4f5631d2-7ddc-4b38-bddd-a1d5df893f7a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 'Kishan', 2, (2, 0), 7, 8]\n"
+     ]
+    }
+   ],
+   "source": [
+    "del list1[3]\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "829eaf1d-a948-488e-9bcd-16e628440a62",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "p = list1.pop(4)\n",
+    "print(p)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "87674ee3-5f0d-4ebd-8969-577f867059e8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 'Kishan', (2, 0), 7, 8]"
+      ]
+     },
+     "execution_count": 46,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "9d7aee2c-8f60-48d7-952a-9d2cd7cc99d4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 3, 'Kishan', (2, 0), 7, 8]"
+      ]
+     },
+     "execution_count": 47,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1.remove(2)\n",
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "367dd3ed-c869-449a-a1f3-a6c083061d8a",
+   "metadata": {},
+   "source": [
+    "* indexing "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "878db8e9-25a5-47e4-9641-7ca4882fe37f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 3]"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1[0:2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "ea6e1ecc-0d0f-43c9-af4b-5e6b1cbc5a5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 'Kishan', 7]"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1[0:6:2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "id": "9f2ec5a5-44b0-4b67-a0a7-d72fc7650a1b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[8, 7, (2, 0), 'Kishan', 3, 1]"
+      ]
+     },
+     "execution_count": 54,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1[::-1]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ab93fcfd-9e5c-4876-add3-fcb08d2a67c9",
+   "metadata": {},
+   "source": [
+    "* Sorted "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "16d59a78-f5c3-41f1-bf14-df82e904f354",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[0, 1, 2, 3, 7, 40, 555]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1 = [7,2,3,40,555, 0, 1]\n",
+    "print(sorted(list1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "id": "e143c407-1a6c-41a2-adae-502ce9fdfa59",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 1, 2, 3, 7, 40, 555]"
+      ]
+     },
+     "execution_count": 60,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1.sort()\n",
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "0ffc61c0-1381-4f23-b55e-f74439d0a99d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[555, 40, 7, 3, 2, 1, 0]"
+      ]
+     },
+     "execution_count": 61,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1.sort(reverse=True)\n",
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e648da84-396e-4f83-9b88-4b5ec2458f16",
+   "metadata": {},
+   "source": [
+    "* index\n",
+    "* count"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "67d93e4e-6dc2-4a92-9d22-824eb746904a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 64,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1.index(7)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "38cb350a-e791-47f0-bfcb-2fb0e61a9ef4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 65,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1.count(7)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "7968c070-d5bc-4ec6-9ad9-f08761f6f378",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0bf9bce2-e593-4c50-88ff-90c0dd1ec23c",
+   "metadata": {},
+   "source": [
+    "### Tuple"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "55426f63-d4de-436d-a298-0e07c11e4c7c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(3, 4, 5)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# tuple\n",
+    "c = (3,4,5)\n",
+    "print(c)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "01e6d73f-0d6d-4a97-9363-7909ade66d1f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1, 2, 3)\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuple1 = (1,2,3)\n",
+    "print(tuple1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "68740a2a-d302-4a8e-9fad-e9f9ef4cdb73",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, 2, 3, 4, 5, 6, 4, 5, 6)"
+      ]
+     },
+     "execution_count": 70,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple1 = tuple1 + (4,5,6)\n",
+    "tuple1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "id": "9244a1db-3aef-4fe5-920b-50ed65c13668",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5f36176a-5f09-4397-a533-73fdf2e7cda4",
+   "metadata": {},
+   "source": [
+    "### Dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "id": "77473dfb-4230-43ee-8365-f3ca38513896",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1: 'javascript', 2: 'Java', 3: 'C++', 4: 'C'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "dict1 = {1:'javascript', 2:\"Java\", 3:'C++', 4:'C'}\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "id": "43647371-4785-4562-a8b3-0167c3e7c972",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys([1, 2, 3, 4])"
+      ]
+     },
+     "execution_count": 111,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1.keys()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "id": "42056df7-b1a4-4901-9224-e1b2937b3eed",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_values(['javascript', 'Java', 'C++', 'C'])"
+      ]
+     },
+     "execution_count": 113,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1.values()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "id": "3bba1aeb-8b0a-4843-a672-74222f1c8081",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_items([(1, 'javascript'), (2, 'Java'), (3, 'C++'), (4, 'C')])"
+      ]
+     },
+     "execution_count": 112,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1.items()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ff550838-8a5c-4c29-be0a-83dd6f6f7a0c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "id": "439b17e3-2a05-4b9d-b010-eaf3635b5094",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1: 'python', 2: 'Java', 3: 'C++', 4: 'C'}"
+      ]
+     },
+     "execution_count": 114,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1[1] = 'python'\n",
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "id": "d09e7c9d-fc48-4478-86b7-85f410a2f098",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1: 'python', 2: 'Java', 3: 'C++', 4: 'C', 5: 'ruby'}"
+      ]
+     },
+     "execution_count": 115,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1[5] = 'ruby'\n",
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "id": "c80d6de6-6cd8-4a91-9e67-1b3f55cd40d0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{2: 'Java', 3: 'C++', 4: 'C', 5: 'ruby'}"
+      ]
+     },
+     "execution_count": 116,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "del dict1[1]\n",
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "id": "871c9527-f3b3-445d-a838-74523247e145",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{3: 'C++', 4: 'C', 5: 'ruby'}"
+      ]
+     },
+     "execution_count": 117,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict1.pop((2))\n",
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "id": "cd8a89a6-0de7-44e5-a7bb-54a91c9c3eea",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "C\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "{3: 'C++', 5: 'ruby'}"
+      ]
+     },
+     "execution_count": 118,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "print(dict1.pop(4))\n",
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "id": "6ca4f6d6-2333-4126-9054-dbb4b48719d8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(5, 'ruby')\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "{3: 'C++'}"
+      ]
+     },
+     "execution_count": 119,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# pop the last item as tuple \n",
+    "print(dict1.popitem())\n",
+    "dict1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3a3d1163-bda6-4461-b180-44ef8ac2a0cc",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "65fc8e05-c92e-464f-9a03-b70354f3316a",
+   "metadata": {},
+   "source": [
+    "### set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 122,
+   "id": "8df72c11-579a-4358-887e-f854f91c1704",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{2, 3, 4}\n"
+     ]
+    }
+   ],
+   "source": [
+    "# set\n",
+    "e = {2,3,4,2}\n",
+    "print(e)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 123,
+   "id": "f9a2a143-4b33-427c-9f94-a4251db6bd82",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{2, 3, 4, 5}"
+      ]
+     },
+     "execution_count": 123,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "e.add(5)\n",
+    "e"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "19a64830-dfa9-454b-97f7-0928d906a668",
+   "metadata": {},
+   "source": [
+    "* union()\n",
+    "* intersection()\n",
+    "* difference()\n",
+    "* symertic_difference()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "id": "5f8739eb-d6bf-4e30-9668-25a328f7b496",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "set1 = {1,2,3,4,5,4,4,4}\n",
+    "set2 = {3,4,5,6}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "id": "22516c01-943e-4cc3-aac8-b132bce962b2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 5, 6}"
+      ]
+     },
+     "execution_count": 125,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1.union(set2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "id": "956f9822-044c-4f4a-9095-0444fbab538b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{3, 4, 5}"
+      ]
+     },
+     "execution_count": 126,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1.intersection(set2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "id": "2cb10c54-230b-4790-93fe-49a21c6d14fe",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2}"
+      ]
+     },
+     "execution_count": 127,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1.difference(set2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "id": "258a0d43-093f-4fd9-b0d7-55725c188400",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 6}"
+      ]
+     },
+     "execution_count": 128,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1.symmetric_difference(set2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "id": "cbd3758d-d687-496e-99b0-ed5562433577",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3b780010-1915-41aa-9025-89e08464f6a2",
+   "metadata": {},
+   "source": [
+    "## User-defined Data Structures"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4aa5ad5f-afac-4300-b54f-4c927c57ed88",
+   "metadata": {},
+   "source": [
+    "### Stack "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "id": "a2eb8343-3fb9-44c9-84dc-9beffcc17740",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = arr.array('i',[1,2,3,4,5])\n",
+    "while True:\n",
+    "    print('1. ')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1d72d6c9-8f3a-4af8-bf12-e1be1da98376",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e98ce145-9467-432b-9cad-566075438625",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dc4b5b67-216b-42d7-9c11-3d14c13e8916",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "fb788825-860c-4032-894b-295969e7d90a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Queues"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "1ff31e19-aac3-41e2-a40e-69da4db336d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Trees"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "4416b34d-28f2-4226-81dc-9e162c824b5e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Link List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "808d50fe-32b0-47b7-ae77-0b98726a40fc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Graphs"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "bf1ebf4d-a6d8-454c-8ab1-91e2614674c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# HashMaps"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9bc36be7-cc04-4809-af26-c103ab4732ee",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
